@@ -13,7 +13,7 @@ lastArchive = datetime.utcnow()
 
 while True:
 
-    if (lastArchive-datetime.utcnow()) > timeDelta:
+    if (datetime.utcnow()-lastArchive) > timeDelta:
         lastArchive = datetime.utcnow()
     
         zipFilename = 'rateLogs_' + datetime.utcnow().strftime("%Y%m%d-%H%M%S")
