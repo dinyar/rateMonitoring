@@ -90,7 +90,16 @@ while True:
         print 'x', x, 'jet16', rateList[2], len(x), len(rateList[2])
         print 'x', x, 'jet36', rateList[3], len(x), len(rateList[3])
         print 'x', x, 'bptx', rateList[4], len(x), len(rateList[4])
-    
+    except OverflowError as e:
+        print "Value error: {0}".format(e)
+        print "[ERROR]: Plotting failed."
+        print 'x', x, 'eg5', rateList[0], len(x), len(rateList[0])
+        print 'x', x, 'muopen', rateList[1], len(x), len(rateList[1])
+        print 'x', x, 'jet16', rateList[2], len(x), len(rateList[2])
+        print 'x', x, 'jet36', rateList[3], len(x), len(rateList[3])
+        print 'x', x, 'bptx', rateList[4], len(x), len(rateList[4])
+    plt.close('all')
+
     if opts.continuous is True:
         time.sleep(15*1)
     else:
